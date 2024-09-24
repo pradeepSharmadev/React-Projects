@@ -85,10 +85,19 @@ input:hover {
   height: 56px;
   width: 160px;
 }
-
 .methods {
   display: flex;
+  width: 420px;
+  height: 56px;
+  text-align: right;
+  align-items: end;
+  justify-content:center;
 }
-.methods button{
-  background-color: #ffffff;
+.methods a{
+  margin-right: 32px;
+}
+.active{
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(0, 0, 119);
 }

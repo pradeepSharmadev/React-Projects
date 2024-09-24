@@ -32,9 +32,9 @@ const Form = () => {
           </div>
 
           <div className="methods">
-            <Button text="Email" />
-            <Button text="SMS-Massage" />
-            <Button text="Phone call" />
+            <a href="#" className='active'>Email</a>
+            <a href="#">Message</a>
+            <a href="#">Phone Call</a>
           </div>
         </div>
         <div className="image">
