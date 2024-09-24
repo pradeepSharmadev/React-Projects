@@ -1,0 +1,94 @@
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.end {
+    /* padding-top: 48px; */
+  max-width: 1005px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.form {
+  width: 420px;
+  height: 293px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.input1 {
+  display: flex;
+  flex-direction: column;
+}
+.width-first{
+    width: 65px;
+}
+.width-second{
+    width: 100px;
+}
+.width-third{
+    width: 158px;
+}
+.input1 label {
+  font-size: 20px;
+  /* width: 65px; */
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  /* border-radius: 2px; */
+  background-color: #ffffff;                            
+  position: relative;
+  top: -12px;
+  text-align: center;
+  margin-left: 35px;
+  /* box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.268); */
+}
+/* .line {
+  height: 1px;
+  width: 65px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  mix-blend-mode:color;
+  margin-left: 35px;
+} */
+ .input1 textarea {
+    height: 136px;
+ }
+.input1 input,textarea {
+    height: 56px;
+    border: 1 px solid rgb(255, 255, 255);
+    border-radius: 24px;
+    width: 420px;
+    position: absolute;
+    /* background-color: transparent; */
+    /* mix-blend-mode:color-dodge; */
+    border: 2px solid #535353;
+  padding: 16px;
+}
+
+input:hover {
+  border: 2px solid #535353;
+}
+.label2{
+    width: 90px;
+}
+.widthfix{
+    width: 420px;
+}
+
+.image {
+  width: 565px;
+  /* margin-bottom:50px; */
+}
+.submit-btn button{
+  height: 56px;
+  width: 160px;
+}
+
+.methods {
+  display: flex;
+}
+.methods button{
+  background-color: #ffffff;
+}
