@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .end {
-    /* padding-top: 48px; */
+  /* padding-top: 48px; */
   max-width: 1005px;
   display: flex;
   justify-content: space-between;
@@ -22,14 +22,14 @@
   display: flex;
   flex-direction: column;
 }
-.width-first{
-    width: 65px;
+.width-first {
+  width: 65px;
 }
-.width-second{
-    width: 100px;
+.width-second {
+  width: 100px;
 }
-.width-third{
-    width: 158px;
+.width-third {
+  width: 158px;
 }
 .input1 label {
   font-size: 20px;
@@ -37,7 +37,7 @@
   font-weight: 500;
   color: rgb(0, 0, 0);
   /* border-radius: 2px; */
-  background-color: #ffffff;                            
+  background-color: #ffffff;
   position: relative;
   top: -12px;
   text-align: center;
@@ -52,51 +52,59 @@
   mix-blend-mode:color;
   margin-left: 35px;
 } */
- .input1 textarea {
-    height: 136px;
- }
-.input1 input,textarea {
-    height: 56px;
-    border: 1 px solid rgb(255, 255, 255);
-    border-radius: 24px;
-    width: 420px;
-    position: absolute;
-    /* background-color: transparent; */
-    /* mix-blend-mode:color-dodge; */
-    border: 2px solid #535353;
+.input1 textarea {
+  height: 136px;
+}
+.input1 input,
+textarea {
+  height: 56px;
+  border: 1 px solid rgb(255, 255, 255);
+  border-radius: 24px;
+  width: 420px;
+  position: absolute;
+  /* background-color: transparent; */
+  /* mix-blend-mode:color-dodge; */
+  border: 2px solid #535353;
   padding: 16px;
 }
 
 input:hover {
-  border: 2px solid #535353;
+  border: 2px solid #4687ff;
 }
-.label2{
-    width: 90px;
+.input1{
+  font-size: 16px;
+  font-family: "Poppins",sans-serif;
 }
-.widthfix{
-    width: 420px;
+.label2 {
+  width: 90px;
+}
+.widthfix {
+  width: 420px;
 }
 
 .image {
   width: 565px;
   /* margin-bottom:50px; */
 }
-.submit-btn button{
+
+.form button {
   height: 56px;
   width: 160px;
+  cursor: pointer;
 }
 .methods {
   display: flex;
   width: 420px;
   height: 56px;
+  margin-top: 64px;
   text-align: right;
   align-items: end;
-  justify-content:center;
+  justify-content: center;
 }
-.methods a{
+.methods a {
   margin-right: 32px;
 }
-.active{
+.active {
   font-size: 22px;
   font-weight: 600;
   color: rgb(0, 0, 119);

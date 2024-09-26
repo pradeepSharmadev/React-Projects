@@ -1,13 +1,38 @@
-import React from 'react'
-import "../Form/Form.modules.css"
-import Button from '../Button/Button';
+import React, { useState } from "react";
+import "../Form/Form.modules.css";
+import Button from "../Button/Button";
 
 const Form = () => {
+  const [name, setName] = useState(null);
+  const [eamil, setEmail] = useState(null);
+  const [massage, setMassage] = useState(null);
+  // const [showAlert, setShowAlert] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event.target[0].value)
+
+    setName(event.target[0].value);
+    setEmail(event.target[1].value);
+    setMassage(event.target[2].value);
+
+    alert(`Name: ${name} \n Email-Id: ${eamil} \n Massage: ${massage}`)
+  };
+
+  const handleClick = () => {
+    // let userConf = confirm(
+    //   `Name: ${name} \n Email-Id: ${eamil} \n Massage: ${massage}`
+    // );
+    // setShowAlert(userConf);
+    // if (showAlert) {
+    //   alert(`Thank You ${name}!`);
+    // }
+  };
   return (
     <div className="top">
       <div className="end">
         <div>
-          <div className="form">
+          <form onSubmit={handleSubmit} className="form">
             <div className="input1">
               <input type="text" name="name" />
               <label className="width-first" htmlFor="name">
@@ -21,18 +46,18 @@ const Form = () => {
               </label>
             </div>
             <div className="input1">
-              <textarea rows={5} type="text" name="massage" />
+              <textarea className="input1" rows={5} type="text" name="massage" />
               <label className="width-third" htmlFor="massage">
                 Enter - Massage
               </label>
             </div>
-          </div>
-          <div className="submit-btn">
             <Button text="Submit" />
-          </div>
+          </form>
 
           <div className="methods">
-            <a href="#" className='active'>Email</a>
+            <a href="#" className="active">
+              Email
+            </a>
             <a href="#">Message</a>
             <a href="#">Phone Call</a>
           </div>
@@ -43,6 +68,6 @@ const Form = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Form
+export default Form;
