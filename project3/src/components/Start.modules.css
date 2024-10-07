@@ -1,37 +1,48 @@
-.container{
-    max-width: 1280px;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto ;
+.container {
+  max-width: 1280px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
 }
-.img{
-    height: 534px;
-    width: 507;
+.img {
+  height: 534px;
+  width: 507;
 }
 
-img{
-    width: 507px;
-    object-fit: cover;
-    border-radius: 10px;
+img {
+  width: 507px;
+  object-fit: cover;
+  border-radius: 10px;
 }
-.headline{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+.headline {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
-.head{
-    font-size: 117px;
-    font-weight: 700;
-    color: #000000;
+.head {
+  font-size: 117px;
+  font-weight: 700;
+  color: #000000;
 }
-.btn Button{
-    height: 62px;
-    width: 280px;
-    font-size: 24px;
-    color: white;
-    font-weight: 600;
-    background-color: #000000;
-    border-radius: 8px;
+.btn Button {
+  height: 62px;
+  width: 280px;
+  font-size: 24px;
+  color: white;
+  font-weight: 600;
+  background-color: #000000;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s background-color ease-in;
+}
+
+.btn button:hover{
+  background-color: white;
+  color: #000000;
+  border: 2px solid black;
+  transition: 0.2s background-color ease-in;
+  
 }
