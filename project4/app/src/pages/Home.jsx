@@ -1,12 +1,12 @@
 import React from "react";
-import { Navbar, Herocard, Items } from "../components/index.jsx";
+import { Navbar, Hero, Items } from "../components/index.js";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      {/* <Herocard />
-      <Items /> */}
+      <Hero />
+      <Items />
     </>
   );
 };

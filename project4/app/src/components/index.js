@@ -1,13 +1,16 @@
 import logo from "../assets/FoodyZone.png"
+import background from "../assets/background.png"
 import Navbar from "./Navbar"
-import Herocard from "./Herocard"
+import Hero from "./Hero"
 import Items from "./Items"
 
 
 
-export default {
+
+export {
     logo,
+    background,
     Navbar,
-    Herocard,
+    Hero,
     Items
 }
