@@ -35,7 +35,7 @@ const Container = styled.div`
   } */
   .back {
     width: 100%;
-    height: 350px;
+    height: 320px;
     position: absolute;
     background-image: url(${background});
     background-size: cover;
@@ -46,7 +46,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     max-width: 720px;
-    height: 350px;
+    height: 320px;
     margin: 0 auto;
     background-color: #cfffcf;
     position: relative;

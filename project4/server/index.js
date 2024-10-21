@@ -1,7 +1,7 @@
 // require("dotenv").config();
 import "dotenv/config";
-import cors from "cors"
-import path from "path"
+import cors from "cors";
+import path from "path";
 import { fileURLToPath } from "url";
 import express from "express";
 
@@ -20,84 +20,85 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Serve static files from the 'public/images' folder
-app.use("/images", express.static(path.join(__dirname, "../public/images")));
+app.use("/images", express.static(path.join(__dirname, "./public/images")));
 
 const foodData = [
   {
     name: "Margherita Pizza",
     text: "Classic cheese pizza with fresh mozzarella and tomato sauce.",
-    price: 8.99,
-    img: "images/margherita.png",
+    price: 747.61,
+    img: "/images/margherita.png",
     category: "Pizza",
     type: "Lunch",
   },
   {
     name: "Pepperoni Pizza",
     text: "A delicious pizza topped with spicy pepperoni and melted cheese.",
-    price: 10.99,
-    img: "images/pepperoni.png",
+    price: 913.93,
+    img: "/images/pepperoni.png",
     category: "Pizza",
     type: "Dinner",
   },
   {
     name: "Caesar Salad",
     text: "Crispy romaine lettuce with parmesan, croutons, and Caesar dressing.",
-    price: 7.49,
-    img: "images/caesar-salad.png",
+    price: 622.87,
+    img: "/images/caesar-salad.png",
     category: "Salad",
     type: "Lunch",
   },
   {
     name: "Grilled Chicken Sandwich",
     text: "Grilled chicken breast with lettuce, tomato, and mayo on a toasted bun.",
-    price: 9.49,
-    img: "images/grilled-chicken.png",
+    price: 789.19,
+    img: "/images/grilled-chicken.png",
     category: "Sandwich",
     type: "Lunch",
   },
   {
     name: "Beef Burger",
     text: "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.",
-    price: 11.49,
-    img: "images/beef-burger.png",
+    price: 955.51,
+    img: "/images/beef-burger.png",
     category: "Burger",
     type: "Dinner",
   },
   {
     name: "Spaghetti Carbonara",
     text: "Traditional Italian pasta with eggs, parmesan, pancetta, and pepper.",
-    price: 12.99,
-    img: "images/spaghetti-carbonara.png",
+    price: 1080.25,
+    img: "/images/spaghetti-carbonara.png",
     category: "Pasta",
     type: "Dinner",
   },
   {
     name: "Chocolate Cake",
     text: "Decadent chocolate cake with a rich chocolate ganache topping.",
-    price: 5.99,
-    img: "images/chocolate-cake.png",
+    price: 498.13,
+    img: "/images/chocolate-cake.png",
     category: "Dessert",
     type: "Dinner",
   },
   {
     name: "Grilled Salmon",
     text: "Perfectly grilled salmon fillet served with lemon butter sauce.",
-    price: 15.99,
-    img: "images/grilled-salmon.png",
+    price: 1329.73,
+    img: "/images/grilled-salmon.png",
     category: "Seafood",
     type: "Dinner",
   },
   {
     name: "French Fries",
     text: "Crispy golden fries with a side of ketchup or mayo.",
-    price: 3.49,
-    img: "images/french-fries.png",
+    price: 290.23,
+    img: "/images/french-fries.png",
     category: "Sides",
     type: "Lunch",
   },
 ];
 app.get("/", (req, res) => {
-  res.send("Server is start");
+  console.log(path.join(__dirname, "./public"));
+  res.json(foodData);
 });
 
 app.get("/food", (req, res) => {
@@ -105,7 +106,7 @@ app.get("/food", (req, res) => {
 });
 
 app.get("/api/foodJSON", (req, res) => {
-  console.log(path.join(__dirname, "../public"));
+  console.log(path.join(__dirname, "./public"));
   res.json(foodData);
 });
 app.listen(PORT, () => {

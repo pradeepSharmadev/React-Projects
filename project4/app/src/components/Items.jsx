@@ -3,75 +3,62 @@ import styled from "styled-components";
 import { background } from "./index";
 
 const Items = () => {
-const [data, setData] = useState(null)
-const [error, setError] = useState(false)
-const [loading, setLoading] = useState(false)
-  
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const BASE_URL = "http://localhost:5000";
-  const objectArr = [
-    {
-      id: "1",
-      img: background,
-      title: "Delicious Food",
-      description: "some text have to show off not this type of text show",
-      price: 276,
-    },
-    {
-      id: "1",
-      img: background,
-      title: "Delicious Food",
-      description: "some text have to show off not this type of text show",
-      price: 276,
-    },
-    {
-      id: "1",
-      img: background,
-      title: "Delicious Food",
-      description: "some text have to show off not this type of text show",
-      price: 276,
-    },
-  ];
 
-  useEffect(()=>{
+  useEffect(() => {
     const fetchData = async () => {
-      setLoading(true)
+      setLoading(true);
       try {
-        const response = await fetch(`${BASE_URL}/food`)
-        const json = await response.json()
-        console.log(js)
+        const response = await fetch(`${BASE_URL}`);
+        const json = await response.json();
 
-        setData(data)
-        setLoading(false)
-      }catch(err) {
-        setError(true)
-        console.log(`Error while fetching data from server Error: ${err}`) 
-    }}
+        setData(json);
+        setLoading(false);
+      } catch (err) {
+        setError(true);
+        console.log(`Error while fetching data from server Error: ${err}`);
+      }
+    };
+    fetchData();
+  }, []);
 
-  },[])
-
-
-  if (error){
+  // console.log(`${data} data coming from server`)
+  if (error) {
     return <div>error</div>;
   }
-  if (Loading){
+  if (loading) {
     return <div>Loading...</div>;
   }
+
+  if (!data) {
+    return <div>No data</div>;
+  }
+
+  // console.log(data)
+  console.log(BASE_URL)
+
   return (
     <Container>
       <div className="main">
-        {objectArr.map((val, ind) => {
+        {data.map((val) => {
           return (
-            <div className="item">
-              <img className="img" src={val.img} alt="" />
+            <div className="item" key={val.name}>
+              <img
+                className="img"
+                src={`${BASE_URL}${val.img}`}
+                alt="img"
+              />
               <div className="content">
                 <div className="heading">
-                  <h2>{val.title}</h2>
+                  <h2>{val.name}</h2>
                 </div>
-                <div className="subheading">
-                  {val.description}
-                </div>
+                <div className="subheading">{val.text}</div>
                 <div className="call-to">
-                  <button className="btn">Shop Now</button>
+                  <button className="btn">Order Now</button>
                   <div className="rupee">&#8377; {val.price}</div>
                 </div>
               </div>
@@ -149,6 +136,7 @@ const Container = styled.div`
       color: #ffffff;
       border: none;
       border-radius: 8px;
+      margin-bottom: 4px;
       font-size: 14px;
       font-weight: 500;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);

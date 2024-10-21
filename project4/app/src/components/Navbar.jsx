@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components';
 import { logo } from './index';
 
 const Navbar = () => {
+  // const data = [
+  // {
+  //   name: "Margherita Pizza",
+  //   text: "Classic cheese pizza with fresh mozzarella and tomato sauce.",
+  //   price: 747.61,
+  //   img: "/images/margherita.png",
+  //   category: "Pizza",
+  //   type: "Lunch",
+  // }]
+
+  // const [search,setSearch] = useState(data)
+  // const [value, setValue] = useState('')
+  // const handleSearch = (event) => {
+    
+  //   setValue(event.target.value)
+
+  //   setSearch(data.filter((item) => { return item.name.toLowerCase().includes(value.toLowerCase())}))
+  //   console.log(search)
+  // }
   return (
     <>
       <Container>
@@ -40,6 +59,7 @@ const Container = styled.div`
     width: 250px;
   }
   .search input {
+    all:unset;
     width: 362px;
     height: 48px;
     border: 2px solid #3ba935;
