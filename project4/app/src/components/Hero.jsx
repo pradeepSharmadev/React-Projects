@@ -2,7 +2,30 @@ import React from 'react'
 import { styled } from 'styled-components';
 import { background } from './index';
 
-const Herocard = () => {
+const Herocard = ({handleClick}) => {
+
+  const buttonData= [{
+    id:1,
+    name:"All",
+    value:"all"
+  },
+  {
+    id:2,
+    name:"Breakfast",
+    value:"breakfast"
+  },
+  {
+    id:3,
+    name:"Lunch",
+    value:"lunch"
+  }
+  ,
+  {
+    id:4,
+    name:"Dinner",
+    value:"dinner"
+  }
+]
   return (
     <Container>
       <div className="back"></div>
@@ -16,9 +39,19 @@ const Herocard = () => {
           the taste of quality fast food crafted just for you!
         </div>
         <div className="filters">
-          <button className='btn'>All</button>
-          <button className='btn'>Break-Fast</button>
-          <button className='btn'>Lunch</button>
+          {buttonData.map((val)=>{
+            return (
+              <button key={val.id}
+                value={val.value}
+                className="btn"
+                onClick={(e) => {
+                  handleClick(e.target.value);
+                }}
+              >
+                {val.name}
+              </button>
+            );
+          })}
         </div>
       </div>
     </Container>

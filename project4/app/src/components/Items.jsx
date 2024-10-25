@@ -1,57 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { background } from "./index";
+import { BASE_URL } from "./Application";
 
-const Items = () => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const BASE_URL = "http://localhost:5000";
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const response = await fetch(`${BASE_URL}`);
-        const json = await response.json();
-
-        setData(json);
-        setLoading(false);
-      } catch (err) {
-        setError(true);
-        console.log(`Error while fetching data from server Error: ${err}`);
-      }
-    };
-    fetchData();
-  }, []);
-
-  // console.log(`${data} data coming from server`)
-  if (error) {
-    return <div>error</div>;
-  }
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!data) {
-    return <div>No data</div>;
-  }
-
-  // console.log(data)
-  console.log(BASE_URL)
-
+const Items = ({data}) => {
   return (
     <Container>
       <div className="main">
-        {data.map((val) => {
+        {data?.map((val) => {
           return (
             <div className="item" key={val.name}>
-              <img
-                className="img"
-                src={`${BASE_URL}${val.img}`}
-                alt="img"
-              />
+              <img className="img" src={`${BASE_URL}${val.img}`} alt="img" />
               <div className="content">
                 <div className="heading">
                   <h2>{val.name}</h2>
@@ -96,6 +54,13 @@ const Container = styled.div`
     border-radius: 4px;
     margin-bottom: 34px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    /* @media (0 < width < 600px) {
+      .item {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+      }
+    } */
   }
   .img {
     height: 110px;
