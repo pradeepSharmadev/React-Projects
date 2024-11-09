@@ -12,6 +12,15 @@ const Gameboard = () => {
   const [diceRoll, setDiceRoll] = useState(1);
   const [totalScore, setTotalScore] = useState(0);
   const [errMassage, setErrMassage] = useState("");
+  const [animateImg, setAnimateImg] = useState(false);
+
+  const toggleAnimation = () =>{
+    setAnimateImg(true)
+    setTimeout(() => {
+      setAnimateImg(false)
+    }, 1000);
+
+  }
 
   const setValue = (val) => {
     setSelectedVal(val);
@@ -21,6 +30,7 @@ const Gameboard = () => {
     if (selectedVal !== null) {
       setErrMassage("");
       setDiceRoll(Math.floor(Math.random() * (7 - 1) + 1));
+      toggleAnimation();
       if (selectedVal === diceRoll) {
         setTotalScore(totalScore + selectedVal);
         setSelectedVal(null);
@@ -75,7 +85,10 @@ const Gameboard = () => {
       </Main>
       <Play>
         <div className="diceRoll">
-          <div onClick={getRandomArbitrary} className="img">
+          <div
+            onClick={getRandomArbitrary}
+            className={animateImg ? "img animateDice" : "img"}
+          >
             <img src={`images/dice_${diceRoll}.png`} alt="Dice" />
           </div>
           <div className="massage">Click to Roll the Dice</div>
@@ -178,6 +191,19 @@ const Play = styled.div`
     height: 250px;
     width: 250px;
     object-fit: cover;
+  }
+  .animateDice{
+    animation: rotate 1s linear 1; 
+
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+
   }
   .massage {
     margin-top: 8px;
