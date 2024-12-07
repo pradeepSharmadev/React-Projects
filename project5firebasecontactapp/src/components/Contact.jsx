@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import "./Contact.css"
 
 const Contact = () => {
   return (
@@ -20,9 +21,9 @@ const Contact = () => {
             New Contact
           </button>
         </div>
-        <div className=" border-gray-300 h-[343px] w-[720px] mx-auto mt-5 border-x-4 grid grid-cols-2 overflow-y-scroll px-5 gap-x-6 gap-y-4  border-t-4 rounded-t-md pt-4">
+        <div className="cards-slider border-gray-300 h-[340px] w-[720px] mx-auto mt-5 border-x-4 grid grid-cols-2 overflow-y-scroll scroll-p-0 px-5 gap-x-6 gap-y-4  border-t-4 rounded-t-md pt-4">
           <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
+            <div class="card p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
               <div className="shrink-0">
                 <img
                   className="size-12"
@@ -37,7 +38,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
+            <div class="card p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
               <div className="shrink-0">
                 <img
                   className="size-12"
@@ -52,7 +53,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
+            <div class="card p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
               <div className="shrink-0">
                 <img
                   className="size-12"
@@ -67,7 +68,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
+            <div class="card p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
               <div className="shrink-0">
                 <img
                   className="size-12"
@@ -82,7 +83,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
+            <div class="card p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
               <div className="shrink-0">
                 <img
                   className="size-12"
@@ -97,7 +98,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
+            <div class="card p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
               <div className="shrink-0">
                 <img
                   className="size-12"
@@ -112,37 +113,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
-              <div className="shrink-0">
-                <img
-                  className="size-12"
-                  src="https://cdn.pixabay.com/photo/2016/10/10/14/46/icon-1728549_1280.jpg"
-                  alt="ChitChat Logo"
-                />
-              </div>
-              <div>
-                <div className="text-xl font-medium text-black">ChitChat</div>
-                <p class="text-slate-500">You have a new message!</p>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
-              <div className="shrink-0">
-                <img
-                  className="size-12"
-                  src="https://cdn.pixabay.com/photo/2016/10/10/14/46/icon-1728549_1280.jpg"
-                  alt="ChitChat Logo"
-                />
-              </div>
-              <div>
-                <div className="text-xl font-medium text-black">ChitChat</div>
-                <p class="text-slate-500">You have a new message!</p>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div class="p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
+            <div class="card p-6 max-x-sm mx-auto bg-white rounded-xl shadow-md flex items-center gap-x-4">
               <div className="shrink-0">
                 <img
                   className="size-12"

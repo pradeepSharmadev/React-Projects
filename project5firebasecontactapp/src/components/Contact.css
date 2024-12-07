@@ -1,0 +1,30 @@
+.cards-slider {
+  overflow-y: auto;
+  scrollbar-width:unset;
+}
+
+.cards-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cards-slider::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.cards-slider::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.cards-slider::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+.card {
+  transition: transform 0.3s;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

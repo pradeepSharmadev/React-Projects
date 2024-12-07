@@ -1,23 +1,21 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import './Navbar.css'
-import logoImg from '../../images/logo.jpg'
+import React, { useState } from "react";
+import "./Navbar.css";
+import logoImg from "../images/logo.png";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] =useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const handleNavbar = () => setToggleMenu(!toggleMenu);
 
-    const handleNavbar = () =>{
-        setToggleMenu(!toggleMenu)
-    }
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="navbar">
       <div className="container navbar-content flex">
-        <div className="brand-and-toggle flex flex-sb">
-          <Link to="/" className="navbar-brand flex">
+        <div className="brand-and-toggler flex flex-sb">
+          <div className="navbar-brand flex">
             <img src={logoImg} alt="site logo" />
-            <span className="text-uppercase fw-7 fs-24 ls-1">BOOKLOG</span>
-          </Link>
+            <span className="text-uppercase fw-7 fs-24 ls-1">bookhub</span>
+          </div>
+
           <button
             type="button"
             className="navbar-toggler-btn"
@@ -31,6 +29,7 @@ const Navbar = () => {
             />
           </button>
         </div>
+
         <div
           className={
             toggleMenu
@@ -40,26 +39,20 @@ const Navbar = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link
-                to="book"
-                className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
-              >
+              <div className="nav-link text-uppercase text-white fs-22 fw-6 ls-1">
                 Home
-              </Link>
+              </div>
             </li>
             <li className="nav-item">
-              <Link
-                to="about"
-                className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
-              >
+              <div className="nav-link text-uppercase text-white fs-22 fw-6 ls-1">
                 about
-              </Link>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
